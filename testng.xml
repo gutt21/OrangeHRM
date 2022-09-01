@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="com.project.utilies.reporting"/>
+</listeners>  
+  <test name="Test 1" enabled="false">
+   <parameter name="browsername" value="chrome"/>
+    <classes>   
+        <class name="com.project.test.Test_login_001"/>   
+        <class name="com.project.test.Test_commonpage_001"/> 
+        <class name="com.project.test.Test_job_001"/> 
+        <class name="com.project.test.Test_paygrades_001"/> 
+        <class name="com.project.test.Test_employment_001"/>
+       <class name="com.project.test.Test_jobcategories_001"/>
+    </classes>
+  </test>
+<test name="Test 2" enabled="false">
+   <parameter name="browsername" value="chrome"/>
+    <classes>   
+        <class name="com.project.test.Test_login_001"/>   
+        <class name="com.project.test.Test_commonpage_001"/> 
+        <class name="com.project.test.Test_workshift_001"/> 
+    </classes>
+  </test>  
+  <test name="Test 2" enabled="true">
+   <parameter name="browsername" value="chrome"/>
+    <classes>   
+        <class name="com.project.test.Test_login_001"/>   
+        <class name="com.project.test.Test_commonpage_001"/> 
+        <class name="com.project.test.Test_oraganiztion_001"/> 
+    </classes>
+  </test>  
+</suite> 
