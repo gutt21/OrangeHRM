@@ -7,13 +7,13 @@
   <test thread-count="5" name="Test 2(failed)">
     <parameter name="browsername" value="chrome"/>
     <classes>
-      <class name="com.project.test.Test_oraganiztion_001">
+      <class name="com.project.test.Test_paygrades_001">
         <methods>
-          <include name="generalTest"/>
+          <include name="paygradestest"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.project.test.Test_oraganiztion_001 -->
+      </class> <!-- com.project.test.Test_paygrades_001 -->
     </classes>
   </test> <!-- Test 2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

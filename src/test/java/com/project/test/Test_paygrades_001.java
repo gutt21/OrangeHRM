@@ -22,12 +22,15 @@ public class Test_paygrades_001 extends baseclass {
 		pay.name(random());
 		Thread.sleep(2000);
 		pay.save();
-		Thread.sleep(2000);
-		pay.save2();
+		Thread.sleep(2000);		
 		pay.addCurrencies();
 		Thread.sleep(2000);
 		pay.selectcurrenies();
 		Thread.sleep(2000);
+		pay.minimumSalary("800000");
+		Thread.sleep(2000);
+		pay.maxmimumSalary("1000000");
+		pay.save3();
 
 	}
 

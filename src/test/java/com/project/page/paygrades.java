@@ -1,4 +1,6 @@
 package com.project.page;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -29,17 +31,31 @@ public class paygrades extends baseclass{
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	WebElement save;
 
-	@FindBy(xpath = "//button[@type='submit']")
-	WebElement save1;
-	
 	@FindBy(xpath = "//button[normalize-space()='Add']")
 	WebElement addCurrencies;
-	
+
 	@FindBy(xpath = "//i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")
 	WebElement selectcurrenies;
-	
-	
-	
+
+	@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div[2]/form/div[2]/div/div[1]/div/div[2]/input")
+	WebElement minimum;
+
+	@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div[2]/form/div[2]/div/div[2]/div/div[2]/input")
+	WebElement maximum;
+
+	@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div[2]/form/div[3]/button[2]")
+	WebElement save2;
+
+
+
+
+
+
+
+
+
+
+
 	public paygrades() {
 		PageFactory.initElements(driver, this);
 	}
@@ -56,7 +72,7 @@ public class paygrades extends baseclass{
 	public void addverify() {
 		boolean akash= addverify.isDisplayed();
 		Assert.assertTrue(akash);
-		
+
 	}
 
 
@@ -69,42 +85,32 @@ public class paygrades extends baseclass{
 		save.click();
 	}
 
-	public void save2() {
-		save1.click();
-	}
-
-
 	public void addCurrencies() {
 		addCurrencies.click();
 	}
-	
+
 	public void selectcurrenies() throws Exception {	
 		selectcurrenies.click();
-		
-		
-		Actions a=new Actions(driver);
+		List<WebElement> akash=driver.findElements(By.xpath("//div[@class='oxd-select-dropdown --positon-bottom']/div"));
+		System.out.println(akash.size());
+		for(WebElement gs:akash) {
+			if(gs.getText().equals("INR - Indian Rupee")) {
+				gs.click();
+				break;
+			}
+		}
+	}
+
+	public void minimumSalary(String mini) {
+		minimum.sendKeys(mini);
+	}
+
+	public void maxmimumSalary(String max) {
+		maximum.sendKeys(max);
+	}
 	
-		
-			a.sendKeys("i").build().perform();
-			Thread.sleep(3000);		
-		    a.sendKeys(Keys.ENTER).build().perform();
-		
-		
-		
-		
-		
-		
-//		Thread.sleep(2000);
-//	    WebElement ab=driver.findElement(By.xpath("//div[text()='BND - Brunei Dollar']"));
-//
-//		JavascriptExecutor js=(JavascriptExecutor)driver;
-//		js.executeScript("arguments[0].scrollIntoView();", ab);
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//div[text()='BND - Brunei Dollar']")).click();	
-//		
-//		//Select se=new Select(selectcurrenies);	
-//		//se.selectByVisibleText("IDR - Indonesian Rupiah");
-//		
+	public void save3() {
+		save2.click();
 	}
 
 }

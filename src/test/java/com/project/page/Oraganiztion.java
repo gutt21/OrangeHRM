@@ -1,9 +1,11 @@
 package com.project.page;
 
+import java.util.List;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 import com.project.base.baseclass;
 
@@ -37,6 +39,13 @@ public class Oraganiztion extends baseclass {
 	@FindBy(xpath = "//div[@class='oxd-select-text-input']")
 	WebElement country;
 
+	@FindBy(xpath = "//textarea[@class='oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical']")
+	WebElement notes;
+
+	@FindBy(xpath = "//button[normalize-space()='Save']")
+	WebElement save;
+
+
 	public Oraganiztion() {
 		PageFactory.initElements(driver, this);
 	}
@@ -55,7 +64,7 @@ public class Oraganiztion extends baseclass {
 		oraganizname.clear();
 		oraganizname.sendKeys(name);
 	}
-	
+
 	public void registration(String rname) {
 		registration.clear();
 		registration.sendKeys(rname);
@@ -64,21 +73,53 @@ public class Oraganiztion extends baseclass {
 	public void taxid(String name) {
 		tax.sendKeys(name);
 	}
-	
+
 	public void phone(String name) {
 		phone.sendKeys(name);
 	}
-	
+
 	public void email(String name) {
 		email.clear();
 		email.sendKeys(name);
-		
+
 	}
 
 	public void country(String name) {
 		country.click();
-		Select se=new Select(country);
-		se.selectByValue(name);
+		List<WebElement> akash=driver.findElements(By.xpath("//div[@class='oxd-select-dropdown --positon-bottom']/div"));		
+		for(WebElement gs:akash) {
+			if(gs.getText().equals("India")) {
+				gs.click();
+				break;
+			}
+		}
+
+
 	}
 
+	public void notes(String note) {
+		notes.clear();
+		notes.sendKeys(note);
+	}
+
+	public void save() {
+		save.click();
+	}
+
+	
+	
+	// loctions 
+	
+	
+	@FindBy(xpath = "//a[normalize-space()='Locations']")
+	WebElement loction;
+	
+	@FindBy(xpath = "//h5[normalize-space()='Locations']")
+	WebElement loctionverify;
+	
+	
+	
+	
+	
+	
 }

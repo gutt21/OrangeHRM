@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.project.test.Test_oraganiztion_001" class="method navigator-link" hash-for-method="generalTest">generalTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -119,6 +105,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.project.test.Test_commonpage_001" class="method navigator-link" hash-for-method="commontest">commontest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.project.test.Test_oraganiztion_001" class="method navigator-link" hash-for-method="generalTest">generalTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -138,31 +129,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.project.test.Test_oraganiztion_001</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="generalTest">
-                  </a> <!-- generalTest -->
-                  <span class="method-name">generalTest</span>
-                  <div class="stack-trace">org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;div&quot;
-Build info: version: &apos;4.2.1&apos;, revision: &apos;ac4d0fdd4a&apos;
-System info: host: &apos;DESKTOP-E3FNQHB&apos;, ip: &apos;192.168.1.9&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3.1&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:49)
-	at com.project.page.Oraganiztion.country(Oraganiztion.java:80)
-	at com.project.test.Test_oraganiztion_001.generalTest(Test_oraganiztion_001.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -189,6 +155,21 @@ Driver info: driver.version: unknown
                   <a name="commontest">
                   </a> <!-- commontest -->
                   <span class="method-name">commontest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.project.test.Test_oraganiztion_001</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="generalTest">
+                  </a> <!-- generalTest -->
+                  <span class="method-name">generalTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -253,22 +234,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'logitest')
-data.setCell(0, 2, 'com.project.test.Test_login_001')
-data.setCell(0, 3, 4614);
+data.setCell(0, 1, 'generalTest')
+data.setCell(0, 2, 'com.project.test.Test_oraganiztion_001')
+data.setCell(0, 3, 7672);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'generalTest')
-data.setCell(1, 2, 'com.project.test.Test_oraganiztion_001')
-data.setCell(1, 3, 1761);
+data.setCell(1, 1, 'logitest')
+data.setCell(1, 2, 'com.project.test.Test_login_001')
+data.setCell(1, 3, 3500);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'commontest')
 data.setCell(2, 2, 'com.project.test.Test_commonpage_001')
-data.setCell(2, 3, 1019);
+data.setCell(2, 3, 776);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -310,30 +291,28 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">logitest</span>
-                <span class="method-start">5771 ms</span>
+                <span class="method-start">9027 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.project.test.Test_commonpage_001</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">commontest</span>
-                <span class="method-start">10401 ms</span>
+                <span class="method-start">12541 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.project.test.Test_oraganiztion_001</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">generalTest</span>
-                <span class="method-start">11420 ms</span>
+                <span class="method-start">13319 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.project.test.Test_login_001</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">13375 ms</span>
+                <span class="method-start">20992 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

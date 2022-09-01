@@ -63,7 +63,7 @@ public class baseclass {
 	@AfterTest
 	public void teardown() throws Exception {
 		Thread.sleep(5000);
-		driver.close();
+		  //driver.close();
 	}
 	
 	public void screnshot( String name,String time) {
