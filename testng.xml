@@ -4,7 +4,7 @@
 <listeners>
 <listener class-name="com.project.utilies.reporting"/>
 </listeners>  
-  <test name="Test 1" enabled="false">
+  <test name="Test 1" enabled="true">
    <parameter name="browsername" value="chrome"/>
     <classes>   
         <class name="com.project.test.Test_login_001"/>   
@@ -13,16 +13,9 @@
         <class name="com.project.test.Test_paygrades_001"/> 
         <class name="com.project.test.Test_employment_001"/>
        <class name="com.project.test.Test_jobcategories_001"/>
+       <class name="com.project.test.Test_workshift_001"/> 
     </classes>
-  </test>
-<test name="Test 2" enabled="false">
-   <parameter name="browsername" value="chrome"/>
-    <classes>   
-        <class name="com.project.test.Test_login_001"/>   
-        <class name="com.project.test.Test_commonpage_001"/> 
-        <class name="com.project.test.Test_workshift_001"/> 
-    </classes>
-  </test>  
+  </test> 
   <test name="Test 2" enabled="true">
    <parameter name="browsername" value="chrome"/>
     <classes>   

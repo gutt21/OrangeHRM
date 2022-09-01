@@ -95,3 +95,9 @@
 2022-08-31 10:06:46,426 [main] INFO noncommerce - login successfully
 2022-08-31 10:07:45,163 [main] INFO noncommerce - login successfully
 2022-08-31 15:04:26,238 [main] INFO noncommerce - login successfully
+2022-09-01 10:31:49,756 [main] INFO noncommerce - login successfully
+2022-09-01 10:32:05,441 [main] INFO noncommerce - job title successfully saved
+2022-09-01 10:32:30,774 [main] INFO noncommerce - employment status successfully saved
+2022-09-01 10:32:47,711 [main] INFO noncommerce - job categories successfully saved
+2022-09-01 10:33:14,617 [main] INFO noncommerce - wrokshift successfully saved
+2022-09-01 10:33:34,296 [main] INFO noncommerce - login successfully
