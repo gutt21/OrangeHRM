@@ -5,9 +5,9 @@
     <classes>
       <class name="com.project.test.Test_oraganiztion_001">
         <methods>
+          <include name="Structuretest"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="locationtest"/>
         </methods>
       </class> <!-- com.project.test.Test_oraganiztion_001 -->
     </classes>

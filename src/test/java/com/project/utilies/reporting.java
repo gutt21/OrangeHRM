@@ -27,7 +27,7 @@ public class reporting implements ITestListener{
 	ExtentTest test;
 	@Override
 	public void onTestStart(ITestResult result) {
-	    time=new SimpleDateFormat("yyyy.mm.dd.HH.mm.ss").format(new Date());
+	    time=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	    String name="Test-Report"+time+".html";
 		report=new ExtentSparkReporter(".\\test-output\\"+name);		
 		extent=new ExtentReports();

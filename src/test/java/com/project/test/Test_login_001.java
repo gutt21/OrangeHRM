@@ -16,6 +16,7 @@ public class Test_login_001 extends baseclass{
         lg.login();
         lg.verifylogin();
         logger.info("login successfully");
+        logger.debug("debug");
       
 		
 	}

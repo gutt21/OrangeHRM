@@ -1,11 +1,13 @@
 package com.project.page;
 
+import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.project.base.baseclass;
 
@@ -45,13 +47,79 @@ public class Oraganiztion extends baseclass {
 	@FindBy(xpath = "//button[normalize-space()='Save']")
 	WebElement save;
 
+	
+	
+	// loctions
+
+	@FindBy(xpath = "//a[normalize-space()='Locations']")
+	WebElement loction;
+
+	@FindBy(xpath = "//h5[normalize-space()='Locations']")
+	WebElement loctionverify;
+
+	@FindBy(xpath = "//button[normalize-space()='Add']")
+	WebElement addnew;
+
+	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[1]")
+	WebElement locationname;
+
+	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[2]")
+	WebElement city;
+
+	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[3]")
+	WebElement state;
+
+	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[4]")
+	WebElement postcode;
+
+	@FindBy(xpath = "//div[@class='oxd-select-text oxd-select-text--active']")
+	WebElement locationcountry;
+
+	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[5]")
+	WebElement mobile;
+
+
+	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[6]")
+	WebElement fax;
+
+	@FindBy(xpath = "(//textarea[@placeholder='Type here ...'])[1]")
+	WebElement addresslocation;
+
+	@FindBy(xpath = "(//textarea[@placeholder='Type here ...'])[2]")
+	WebElement noteslocation;
+
+	@FindBy(xpath = "//button[normalize-space()='Save']")
+	WebElement savelocation;
+	
+	
+	//Structure
+
+	@FindBy(xpath = "//a[normalize-space()='Structure']")
+	WebElement structure;
+
+	@FindBy(xpath = "//label[normalize-space()='Edit']")
+	WebElement structureedit;
+
+	@FindBy(xpath = "//button[normalize-space()='Add']")
+	WebElement addnewstructure;
+
+	@FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
+	WebElement unitid;
+
+	@FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[3]")
+	WebElement structurename;
+
+	@FindBy(xpath = "(//textarea[@placeholder='Type description here'])[1]")
+	WebElement structuredescription;
 
 	public Oraganiztion() {
 		PageFactory.initElements(driver, this);
 	}
 
 	public void oraganiztions() {
-		oraganiztion.click();
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebElement mylink=wait.until(ExpectedConditions.elementToBeClickable(oraganiztion));
+		mylink.click();
 	}
 
 	public void general() {
@@ -113,45 +181,6 @@ public class Oraganiztion extends baseclass {
 	// loctions 
 
 
-	@FindBy(xpath = "//a[normalize-space()='Locations']")
-	WebElement loction;
-
-	@FindBy(xpath = "//h5[normalize-space()='Locations']")
-	WebElement loctionverify;
-
-	@FindBy(xpath = "//button[normalize-space()='Add']")
-	WebElement addnew;
-
-	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[1]")
-	WebElement locationname;
-
-	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[2]")
-	WebElement city;
-
-	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[3]")
-	WebElement state;
-
-	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[4]")
-	WebElement postcode;
-
-	@FindBy(xpath = "//div[@class='oxd-select-text oxd-select-text--active']")
-	WebElement locationcountry;
-
-	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[5]")
-	WebElement mobile;
-
-
-	@FindBy(xpath = "(//input[@placeholder='Type here ...'])[6]")
-	WebElement fax;
-
-	@FindBy(xpath = "(//textarea[@placeholder='Type here ...'])[1]")
-	WebElement addresslocation;
-
-	@FindBy(xpath = "(//textarea[@placeholder='Type here ...'])[2]")
-	WebElement noteslocation;
-
-	@FindBy(xpath = "//button[normalize-space()='Save']")
-	WebElement savelocation;
 
 	public void loction() {
 		loction.click();
@@ -223,27 +252,7 @@ public class Oraganiztion extends baseclass {
 
 	//Structure
 
-	@FindBy(xpath = "//a[normalize-space()='Structure']")
-	WebElement structure;
 
-	@FindBy(xpath = "//label[normalize-space()='Edit']")
-	WebElement structureedit;
-
-	@FindBy(xpath = "//button[normalize-space()='Add']")
-	WebElement addnewstructure;
-
-	@FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[2]")
-	WebElement unitid;
-
-	@FindBy(xpath = "(//input[@class='oxd-input oxd-input--active'])[3]")
-	WebElement structurename;
-
-	@FindBy(xpath = "(//textarea[@placeholder='Type description here'])[1]")
-	WebElement structuredescription;
-	
-	
-	
-	
 	
 	public void structure() {
 		structure.click();

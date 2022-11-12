@@ -1,44 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-12T12:09:14 IST" name="Suite" finished-at="2022-09-12T12:09:29 IST" duration-ms="14942">
+  <suite started-at="2022-11-11T17:08:08 IST" name="Default suite" finished-at="2022-11-11T17:08:08 IST" duration-ms="7">
     <groups>
     </groups>
-    <test started-at="2022-09-12T12:09:14 IST" name="Test 2" finished-at="2022-09-12T12:09:29 IST" duration-ms="14942">
-      <class name="com.project.test.Test_login_001">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.project.test.Test_login_001@4ec4f3a0]" started-at="2022-09-12T12:09:14 IST" name="setup" finished-at="2022-09-12T12:09:19 IST" duration-ms="4181" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="logitest()[pri:0, instance:com.project.test.Test_login_001@4ec4f3a0]" started-at="2022-09-12T12:09:19 IST" name="logitest" finished-at="2022-09-12T12:09:22 IST" duration-ms="3685" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logitest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.project.test.Test_login_001@4ec4f3a0]" started-at="2022-09-12T12:09:24 IST" name="teardown" finished-at="2022-09-12T12:09:29 IST" duration-ms="5084" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.project.test.Test_login_001 -->
-      <class name="com.project.test.Test_commonpage_001">
-        <test-method signature="commontest()[pri:0, instance:com.project.test.Test_commonpage_001@67c27493]" started-at="2022-09-12T12:09:22 IST" name="commontest" finished-at="2022-09-12T12:09:23 IST" duration-ms="805" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- commontest -->
-      </class> <!-- com.project.test.Test_commonpage_001 -->
-      <class name="com.project.test.Test_oraganiztion_001">
-        <test-method signature="Structuretest()[pri:0, instance:com.project.test.Test_oraganiztion_001@1bd4fdd]" started-at="2022-09-12T12:09:23 IST" name="Structuretest" finished-at="2022-09-12T12:09:24 IST" duration-ms="1154" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Structuretest -->
-      </class> <!-- com.project.test.Test_oraganiztion_001 -->
-    </test> <!-- Test 2 -->
-  </suite> <!-- Suite -->
+    <test started-at="2022-11-11T17:08:08 IST" name="Default test" finished-at="2022-11-11T17:08:08 IST" duration-ms="7">
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

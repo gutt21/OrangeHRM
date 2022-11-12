@@ -36,6 +36,7 @@ public class baseclass {
 	@BeforeTest
 	public void setup(String browsername)
 
+	
 	{
 		if(browsername.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -54,7 +55,7 @@ public class baseclass {
 		}
 
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(90));		
 		driver.get(url);		
 		logger=Logger.getLogger("noncommerce");
 		PropertyConfigurator.configure("log4j.properties");
